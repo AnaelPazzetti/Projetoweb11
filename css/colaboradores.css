@@ -1,0 +1,77 @@
+body{
+    margin: 0;
+    background-color: rgb(224, 221, 221);
+}
+
+
+*{
+    box-sizing: border-box !important;
+}
+
+.headerLogo{
+    background-image: linear-gradient(to right, rgba(19, 1, 1, 0.418), rgb(104, 0, 0), red  );
+
+}
+ 
+
+.coach-list{
+    height: auto;
+}
+
+
+.coach-list:hover{
+    box-shadow: 1px 1px 10px  black ;
+}
+
+.coach-card{
+    height:100%;
+    overflow: hidden;
+}
+
+.coach-description{
+    height: 40%;
+    
+}
+
+.coach-meta{
+    min-height: 30%;    
+    height: 50%;
+    width: 100%;
+    background-color: red;
+
+
+}
+
+.coach-link{
+    color: black;
+    font-weight: bold;
+    width: 100%;
+
+}
+
+
+#headerLink:hover{
+    text-decoration: underline;
+}
+
+#headerLink{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+ .bg-dark{
+    background-color: black !important;
+ }
+
+
+footer{ 
+    background-color: black;
+    color: white;
+    a{
+        color: white;
+    }
+
+}
+
+
+

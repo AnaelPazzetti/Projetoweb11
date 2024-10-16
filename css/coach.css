@@ -1,0 +1,26 @@
+.maindiv{
+    background-color: black;
+    border-top: 2px solid red;
+    border-bottom: 2px solid red;
+    height: fit-content;
+    color: whitesmoke;
+}
+
+.bio{
+    background-color: black;
+    border-top: 2px solid red;
+    border-bottom: 2px solid red;
+    height: fit-content;
+    color: whitesmoke;
+    max-height: 18em;
+    overflow: hidden;
+}
+
+
+
+#socialmedialogo{
+    overflow: hidden;
+    width:5px;
+    margin: 5px;
+}
+

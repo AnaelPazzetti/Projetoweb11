@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasil Powerlifting</title>
+    
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../boostrap5/css/bootstrap.min.css">
+    <script src="../boostrap5/js/bootstrap.bundle.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="../img/logo.png">
+    <link href="../css/records.css" rel="stylesheet">
+
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid" style="background-color: black;" >
+            <div class="headerLogo">
+
+                <a target="_self" href="../index.html">
+                    <img src="../img/logo.png" style="width: 6em;"> 
+                </a>
+            </div>
+
+            <div  id="navbarDark">            
+                <ul class="nav">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" id="headerLink" href="powerlifting.html">O que é Powerlifting?</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" id="headerLink" href="recordform.html">Recordes</a>
+                    </li>                  
+                            
+                    <li class="nav-item dropdown mx-2">
+                        <a class="nav-link dropdown-toggle" href="#" id="headerLink" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Educação
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="z-index: +1;">                                                                      
+                          <li><a class="dropdown-item" href="recomendad.html">Livros/Cursos</a></li> 
+                          <li><a class="dropdown-item" href="planilhas.html">Planilhas de Treino</a></li>  
+                          <li><a class="dropdown-item" href="colaboradores.html">Treinadores/Colaboradores</a></li>                                              
+                        </ul>
+                    </li>                       
+                </ul>
+            </div>                        
+
+                <form class="d-flex">
+                    <input class="form-control me=2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+
+        </div>
+    </nav>  
+
+
+
+
+    <div class="container col-12 col-sm-12 col-md-7 col-lg-6 col-xl-6 mt-5 text-center p-4 formdiv">
+      
+    <h4 class="text-center fw-bold">Recordes Internacionais</h4>
+      
+      <form class="mx-5 p-5" action="https://www.openpowerlifting.org/rankins">
+
+
+        <div class="form-row align-items-center my-2" >
+    
+            <label for="eq">Categoria de Equipamento</label><br>
+            <select class="form-select" name="eq">
+              <option disabled selected>Selecione a categoria</option><br>
+              <option value="raw">Raw/Cru (sem equipamento)</option>
+              <option value="wraps">Com faixas de joelho</option>
+              <option  value="single">Equipado simples</option>
+              <option value="multi">Equipado multíplice</option>
+            </select>
+            
+
+        </div>
+        
+        <div class="form-row my-2">
+
+          <label for="catPeso">Categoria de Peso</label><br>
+          <select class="form-select">
+            <option disabled selected>Selecione a categoria de peso</option>
+            <option disabled style="color: black; ;font-weight: bolder;"><b>IPF MEN</b></option>
+            <option name="catPeso" value="ipf53">53Kg</option>
+            <option name="catPeso" value="ipf59">59Kg</option>
+            <option name="catPeso" value="ipf66">66Kg</option>
+            <option name="catPeso" value="ipf74">74Kg</option>
+            <option name="catPeso" value="ipf83">83Kg</option>
+            <option name="catPeso" value="ipf93">93Kg</option>
+            <option name="catPeso" value="ipf105">105Kg</option>
+            <option name="catPeso" value="ipf120">120Kg</option>
+            <option name="catPeso" value="ipfover120">+120Kg</option>
+            
+          </select>
+
+        </div>              
+
+        <div class="form-row my-2">
+
+          
+        <label class="form-check-label" for="Sexo">  Sexo:</label><br>
+
+        <input class="form-check-input"  type="radio" name="Sexo" id="men" value="/men">
+        <label class="form-check-label" for="men">Masculino</label>
+        <input class="form-check-input" type="radio" name="Sexo" id="women" value="/women">
+        <label class="form-check-label" for="women">Feminino</label>
+            <br>
+            <br>
+            
+          </div>   
+          
+          <div class="form-row my-2">
+
+            <label for="catIdade">Categoria Idade</label><br>
+            <select class="form-select">
+              <option name="catIdade" disabled selected>Seleciona a categoria de Idade</option>                            
+              <option name="catIdade" value="20-23">Júnior</option>
+              <option name="catIdade" value="">Open/Aberto</option>
+              <option name="catIdade" value="40-49">Master I</option>
+              <option name="catIdade" value="50-59">Master II</option>
+              <option name="catIdade" value="60-69">Master III</option>
+              <option name="catIdade" value="70-79">Master IV</option>
+              
+              
+            </select>
+
+          </div>
+            
+            <br>
+            <br>
+            <input class="btn btn-primary" type="submit">
+            
+          </form>
+          
+                              
+        </div>
+          
+        <!-- JavaScript pra envio de form na URL de maneira Correta 
+          +Adicionar todas variáveis-->
+
+    <div class="mt-5 p-3" id="nacionaisheader" style="background-color: black;">
+        <h4 style="color:white" class="text-center">Recordes Nacionais</h4>
+    </div>    
+          
+    <div class="container Mainrecords">
+      <div class="row">
+
+        <div class="col-12 col-lg-6 recordtable text-center mt-4">
+          
+          <table class="table table-striped table-dark">
+            <thead>
+              <tr>
+                <th colspan="4">TOTAL Feminino (RAW)</th>
+              </tr>
+              <tr>
+                <th>Cat.Peso</th>
+                <th>Nome</th>
+                <th>Total</th>
+                <th>Data</th>
+              </tr>            
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>47Kg</td>
+                <td>Giulia Cunha Costa Carvalho</td>
+                <td>365kg</td>
+                <td>09/10/2021</td>
+              </tr>
+              <tr>
+                <td>52Kg</td>
+                <td>Giulia Cunha Costa Carvalho</td>
+                <td>380kg<t/d>
+                <td>08/03/2024</td>
+              </tr>
+              <tr>
+                <td>57Kg</td>
+                <td>Vanessa Alvares</td>
+                <td>412,5kg</td>
+                <td>07/12/2017</td>
+              </tr>
+              <tr>
+                <td>63Kg</td>
+                <td>Cicera Tavares</td>
+                <td>457,5kg</td>
+                <td>08/06/2018</td>
+              </tr>
+              <tr>
+                <td>69Kg</td>
+                <td>Ana Rosa Castellain</td>
+                <td>530kg</td>
+                <td>28/02/2019</td>
+              </tr>
+              <tr>
+                <td>76Kg</td>
+                <td>Ana Rosa Castellain</td>
+                <td>540,5kg</td>
+                <td>17/09/2019</td>
+              </tr>
+              <tr>
+                <td>84Kg</td>
+                <td>Marina Garcia De Almeida</td>
+                <td>532,5kg</td>
+                <td>18/02/2022</td>
+              </tr>
+              <tr>
+                <td>+84Kg</td>
+                <td>Bianca Soares Dos Santos</td>
+                <td>553kg</td>
+                <td>09/03/2024</td>
+              </tr>
+
+
+            </tbody>
+          
+
+
+          </table>
+
+        </div>
+
+        <div class="col-12 col-lg-6 recordtable text-center mt-4">
+          
+          <table class="table table-striped table-dark">
+            <thead>
+              <tr>
+                <th colspan="4">TOTAL Masculino (RAW)</th>
+              </tr>
+              <tr>
+                <th>Cat. Peso</th>
+                <th>Nome</th>
+                <th>Total</th>
+                <th>Data</th>
+              </tr>            
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>59Kg</td>
+                <td>Lucio Vitor de Lima</td>
+                <td>472,5kg</td>
+                <td>10/10/2021</td>
+              </tr>
+              <tr>
+                <td>66Kg</td>
+                <td>Eudson Lima</td>
+                <td>619kg<t/d>
+                <td>16/02/2020</td>
+              </tr>
+              <tr>
+                <td>74Kg</td>
+                <td>Andre De Souza Garcia</td>
+                <td>700,5kg</td>
+                <td>08/09/2022</td>
+              </tr>
+              <tr>
+                <td>83Kg</td>
+                <td>Daniel Carvalho</td>
+                <td>717,5kg</td>
+                <td>24/06/2016</td>
+              </tr>
+              <tr>
+                <td>93Kg</td>
+                <td>David Coimbra</td>
+                <td>820kg</td>
+                <td>21/09/2019</td>
+              </tr>
+              <tr>
+                <td>105Kg</td>
+                <td>Rogerio Almeida</td>
+                <td>792,5kg</td>
+                <td>10/06/2022</td>              
+              </tr>
+              <tr>
+                <td>120Kg</td>
+                <td>Matheus Garcia Costa</td>
+                <td>862,5kg</td>
+                <td>10/03/2024</td>
+              </tr>
+              <tr>
+                <td>+120Kg</td>
+                <td>Henrique Sinihur</td>
+                <td>926,5kg</td>
+                <td>17/09/2019</td>
+              </tr>
+
+
+            </tbody>
+          
+
+
+          </table>
+
+        </div>
+
+        <div class="col-12 col-lg-6 recordtable text-center mt-4">
+          
+          <table class="table table-striped table-dark">
+            <thead>
+              <tr>
+                <th colspan="4">TOTAL Feminino (Equipado)</th>
+              </tr>
+              <tr>
+                <th>Cat. Peso</th>
+                <th>Nome</th>
+                <th>Total</th>
+                <th>Data</th>
+              </tr>            
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>47Kg</td>
+                <td>Mayara Rocha</td>
+                <td>405kg</td>
+                <td>12/04/2024</td>
+              </tr>
+              <tr>
+                <td>52Kg</td>
+                <td>Irani Rodrigues Barbosa</td>
+                <td>457,5kg<t/d>
+                <td>08/11/2019</td>
+              </tr>
+              <tr>
+                <td>57Kg</td>
+                <td>Erica Bueno</td>
+                <td>548,5kg</td>
+                <td>08/11/2021</td>
+              </tr>
+              <tr>
+                <td>63Kg</td>
+                <td>Cicera Tavares</td>
+                <td>575Kg</td>
+                <td>16/11/2016</td>
+              </tr>
+              <tr>
+                <td>69Kg</td>
+                <td>Ana Rosa Castellain</td>
+                <td>635kg</td>
+                <td>25/07/2017</td>
+              </tr>
+              <tr>
+                <td>76Kg</td>
+                <td>Ana Rosa Castellain</td>
+                <td>661kg</td>
+                <td>17/09/2019</td>
+              </tr>
+              <tr>
+                <td>84Kg</td>
+                <td>Mariana Contino</td>
+                <td>552,5kg</td>
+                <td>21/04/2018</td>
+              </tr>
+              <tr>
+                <td>+84Kg</td>
+                <td>Deisiane Machado Moretti</td>
+                <td>545,5kg</td>
+                <td>13/04/2024</td>
+              </tr>
+
+
+            </tbody>
+          
+
+
+          </table>
+
+        </div>
+
+        <div class="col-12 col-lg-6 recordtable text-center mt-4">
+          
+          <table class="table table-striped table-dark">
+            <thead>
+              <tr>
+                <th colspan="4">TOTAL Masculino (Equipado)</th>
+              </tr>
+              <tr>
+                <th>Cat. Peso</th>
+                <th>Nome</th>
+                <th>Total</th>
+                <th>Data</th>
+              </tr>            
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>59Kg</td>
+                <td>Eudson Lima</td>
+                <td>667,5kg</td>
+                <td>02/11/2014</td>
+              </tr>
+              <tr>
+                <td>66Kg</td>
+                <td>Eudson Lima</td>
+                <td>755kg<t/d>
+                <td>18/11/2019</td>
+              </tr>
+              <tr>
+                <td>74Kg</td>
+                <td>André Garica</td>
+                <td>791kg</td>
+                <td>14/07/2016</td>
+              </tr>
+              <tr>
+                <td>83Kg</td>
+                <td>Marcelo Del Lama da Silva</td>
+                <td>847,5kg</td>
+                <td>02/08/2014</td>
+              </tr>
+              <tr>
+                <td>93Kg</td>
+                <td>David Coimbra</td>
+                <td>980kg</td>
+                <td>07/11/2018</td>
+              </tr>
+              <tr>
+                <td>105Kg</td>
+                <td>Vanderlei Barbosa</td>
+                <td>1.001kg</td>
+                <td>12/10/2021</td>              
+              </tr>
+              <tr>
+                <td>120Kg</td>
+                <td>Carlos Eduardo Ferraz</td>
+                <td>971kg</td>
+                <td>03/06/2013</td>
+              </tr>
+              <tr>
+                <td>+120Kg</td>
+                <td>Eumenes Souza Jr.</td>
+                <td>942,5kg</td>
+                <td>16/11/2016</td>
+              </tr>
+
+
+            </tbody>
+          
+
+
+          </table>
+
+        </div>
+
+        <!-- Adicionar Demais Recordes e Categorias
+             Adicionar Form + Javascript pra selecionar recordes que 
+             vão aparecer -->
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <br>
+
+      <footer class="text-center text-lg-start pt-1 mt-5">
+            
+            
+            
+            <section class="mt-5">
+          <div class="container text-center text-md-start mt-5">        
+            <div class="row mt-3">      
+                 
+              <!-- Sobre a "empresa"-->       
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <h6 class="text-uppercase fw-bold mb-4">
+                  <img class="headerLogo" src="../img/logo.png" style="width: 3em;">
+                  Powerlifting Brasil
+                </h6>
+                <p>
+                  Somos uma organização formada com o intuito de divulgar conhecimento sobre
+                  o Powerlifting, um esporte ainda em ascenção no Brasil.              
+                </p>
+                <p>
+                    Divulgando as principais noticias e convidando treinadores e atletas experientes
+                    a compartilharem seu conhecimento.
+                </p>
+              </div>              
+
+                <!-- Links -->                    
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">                
+                <h6 class="text-uppercase fw-bold mb-4">
+                  Links
+                </h6>
+                <p>
+                    <a class="text-reset" id="headerLink" href="powerlifting.html">O que é Powerlifting?</a>
+                </p>
+                <p>
+                    <a class="text-reset" id="headerLink" href="recordform.html">Recordes</a>
+                </p>
+                
+                <p>
+                    <a class="text-reset" id="headerLink" href="recomendad.html">Livros/Cursos</a>
+                </p>
+                <p>
+                    <a class="text-reset" id="headerLink" href="planilhas.html">Planilhas de Treino</a>
+                </p>
+                <p>
+                    <a id="headerLink" href="colaboradores.html">Treinadores/Colaboradores</a>              
+                </p>
+              </div>
+        
+                  
+              <!-- Contato -->
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+             
+                <h6 class="text-uppercase fw-bold mb-4">Fale Conosco</h6>
+                <p>
+                  <img src="../img/mail.png" width="30em">
+                  powerlbrazil@gmail.com
+                </p>
+                <p>
+                    <img src="../img/telephone.png" width="30em"> 
+                    +55 54 981193443
+                </p>
+                
+              </div>
+          
+            </div>
+        
+          </div>
+        </section>     
+      
+      
+        <div class="text-center p-4">
+          © 2024 Copyright:
+          <a class="text-reset fw-bold" href="index.html">Brasil Powerlifting</a>
+        </div>
+      
+      </footer>
+
+
+
+
+
+</body>
+</html>
+
+
+
+
